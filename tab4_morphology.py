@@ -34,7 +34,6 @@ class Tab4Morphology:
         self.original_image_label_t4.setStyleSheet("""
             border: 2px solid #B0B0B0; 
             padding: 5px; 
-            background: rgba(255, 255, 255, 0.7);
         """)
         # 处理结果图
         self.morph_result_label = QLabel()

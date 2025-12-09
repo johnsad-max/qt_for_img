@@ -51,7 +51,7 @@ class Tab3FrequencyFilter:
         self.original_image_label_t3.setStyleSheet("""
             border: 2px solid #B0B0B0; 
             padding: 5px; 
-            background: rgba(255, 255, 255, 0.7);
+            
             font-size: 14px;
             color: #333333;
         """)
@@ -206,7 +206,6 @@ class Tab3FrequencyFilter:
         self.original_spectrum_label.setStyleSheet("""
             border: 2px solid #B0B0B0; 
             padding: 5px; 
-            background: rgba(255, 255, 255, 0.7);
             font-size: 14px;
             color: #333333;
         """)

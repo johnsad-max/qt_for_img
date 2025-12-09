@@ -32,7 +32,7 @@ class Tab1Processor:
         self.original_image_label.setStyleSheet("""
             border: 2px solid #B0B0B0; 
             padding: 5px; 
-            background: rgba(255, 255, 255, 0.7);  /* 半透明白色背景，凸显图像 */
+            
         """)
         # 灰度图
         self.gray_image_label = QLabel()

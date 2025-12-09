@@ -34,7 +34,7 @@ class MyMainWindow(QMainWindow):
         ]   
     def init_window_style(self):
         """设置窗口基础样式（全局渐变背景+Tab样式）"""
-        self.setWindowTitle("图像处理程序")
+        self.setWindowTitle("Image Processing Tool")
         self.setGeometry(100, 100, 1400, 700)
         
         # 全局样式（渐变背景+Tab控件优化）

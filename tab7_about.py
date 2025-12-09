@@ -26,7 +26,7 @@ class Tab7About(QWidget):
         # 2. 核心信息区（使用QTextBrowser支持换行和链接）
         info_browser = QTextBrowser()
         info_browser.setStyleSheet("""
-            font-size: 14px;
+            font-size: 20px;
             color: #333333;
             background: transparent;
             border: none;
@@ -34,13 +34,17 @@ class Tab7About(QWidget):
         """)
         # 设置不可编辑，仅展示
         info_browser.setReadOnly(True)
+        
+        # 告诉控件：外部链接直接用系统浏览器打开，不要自己加载
+        info_browser.setOpenExternalLinks(True)
+        
         # 内容（支持HTML格式，可添加链接）
         info_content = """
         <p><strong>📌 软件简介</strong><br>
         一款集成多种图像处理功能的桌面应用，支持空间域滤波、频域滤波、形态学处理、边缘检测等核心功能。</p>
         
         <p><strong>👨‍💻 作者信息</strong><br>
-        作者：周勇<br>
+        作者：周勇(202321020629)<br>
         邮箱：johnsad@foxmail.com<br>
         日期：2025年12月</p>
         
@@ -64,8 +68,6 @@ class Tab7About(QWidget):
         本软件仅用于学习交流，请勿用于商业用途。如有问题，欢迎反馈交流。</p>
         """
         info_browser.setHtml(info_content)
-        # 点击链接自动打开浏览器
-        info_browser.anchorClicked.connect(lambda url: QDesktopServices.openUrl(url))
         self.layout.addWidget(info_browser)
         
         # 3. 底部按钮区
@@ -88,7 +90,6 @@ class Tab7About(QWidget):
         repo_btn.clicked.connect(lambda: QDesktopServices.openUrl(QUrl("https://github.com/johnsad-max/qt_for_img.git")))
         btn_layout.addWidget(repo_btn, alignment=Qt.AlignCenter)
         self.layout.addLayout(btn_layout)
-
 
     def get_layout(self):
         """返回布局（供主窗口调用）"""
