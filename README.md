@@ -1,68 +1,100 @@
-# qt_for_img
+qt_for_img
 
-A desktop application for image processing with PyQt5
+基于 PyQt5 + OpenCV + Pillow + NumPy + Matplotlib 构建的图像处理桌面应用程序。
+提供空间域滤波、频域滤波、边缘检测、形态学处理等常见图像处理功能，适用于图像处理学习、演示和实验。
 
-## 简介
+✨ 功能特点
 
-qt_for_img 是一款基于 PyQt5 开发的桌面图像处理工具，集成了多种常用的图像处理功能，包括基础图像处理、空间域滤波、频域滤波、形态学处理和边缘检测等。该应用界面简洁直观，操作便捷，适合用于图像处理学习和日常使用。
+图像加载与灰度化
 
-## 功能特点
+频域显示与频域滤波
 
-- **基础图像处理**：支持图像加载、灰度化转换、频域频谱显示
-- **空间域滤波**：提供均值滤波、高斯滤波、锐化滤波等常用滤波功能
-- **频域滤波**：支持频域内的各种滤波操作
-- **形态学处理**：包含腐蚀、膨胀、开运算、闭运算等形态学操作，支持核大小调节
-- **边缘检测**：实现多种边缘检测算法
-- **图片导出**：支持单个页面或全部页面处理结果导出
+空间域滤波（均值、高斯、锐化等）
 
-## 技术栈
+图像形态学操作（腐蚀、膨胀、开/闭运算）
 
-- 界面框架：PyQt5
-- 图像处理：OpenCV、PIL (Pillow)
-- 数据处理：NumPy
-- 可视化：Matplotlib
+常用边缘检测算法
 
-## 安装与使用
+处理后图像支持导出
 
-### 前提条件
-- Python 3.6+
-- 所需依赖库：PyQt5、opencv-python、pillow、numpy、matplotlib
+多标签界面，结构清晰
 
-### 安装步骤
+基于 MIT License 可自由使用与扩展
+
+🛠 技术栈
+技术	用途
+Python	主程序语言
+PyQt5	图形用户界面
+OpenCV	图像处理算法
+Pillow	图片读写
+NumPy	数值计算
+Matplotlib	频谱显示等绘图
+📦 安装方法
 1. 克隆仓库
-```bash
 git clone https://github.com/johnsad-max/qt_for_img.git
 cd qt_for_img
 
-安装依赖
-```bash
-运行
+2. 安装依赖
+
+建议使用虚拟环境：
+
+python -m venv venv
+source venv/bin/activate       # macOS / Linux
+venv\Scripts\activate          # Windows
+
+
+如果仓库有 requirements.txt：
+
+pip install -r requirements.txt
+
+
+如果没有，可手动安装：
+
 pip install PyQt5 opencv-python pillow numpy matplotlib
-运行应用
-bash
-运行
+
+▶️ 运行方式
 python main.py
-使用说明
-加载图片：在 "图像处理" 标签页中点击 "加载图片" 按钮，选择本地图片文件
-基础处理：可在 "图像处理" 标签页进行灰度化转换和频域频谱显示
-空间域滤波：切换到 "空间域滤波" 标签页，选择所需滤波方式
-频域滤波：在 "频域滤波" 标签页进行频域相关滤波操作
-形态学处理：在 "形态学处理" 标签页选择相应操作，可通过滑块调节核大小
-边缘检测：切换到 "边缘检测" 标签页，选择合适的检测算法
-导出图片：点击窗口顶部的 "导出图片" 按钮，可选择导出当前页面结果或全部页面结果
-界面预览
-提示：请将应用界面截图保存到仓库的 screenshots/ 目录下，并替换以下示例路径
 
-image
+📘 使用说明
+1. 加载图片
 
-image
+在“图像处理”页面点击 加载图片 选择本地文件。
 
-image
-许可证
-本项目采用 MIT 许可证，详情参见 LICENSE 文件。
-作者信息
-作者：周勇 (202321020629)
+2. 可用处理功能
+标签页	功能说明
+图像处理	加载图像、灰度化、频域显示
+空间域滤波	模糊、锐化、降噪等滤波机制
+频域滤波	高频 / 低频等频域操作
+形态学处理	腐蚀、膨胀、开/闭运算
+边缘检测	多种边缘检测算法
+3. 导出图像
+
+顶部工具栏可导出当前处理后的图像或批量导出全部结果。
+
+🖼 示例截图（可选）
+
+如果你加入截图，可以按以下结构放：
+
+screenshots/
+├─ main_window.png
+├─ spatial_filter.png
+├─ frequency_filter.png
+
+
+Markdown 示例：
+
+![Main Window](screenshots/main_window.png)
+
+📄 License
+
+本项目使用 MIT License。
+你可以自由用于学习、研究或扩展。
+
+👨‍💻 作者
+
+周勇
 邮箱：johnsad@foxmail.com
-日期：2025 年 12 月
-免责声明
-本软件仅用于学习交流，请勿用于商业用途。如有问题，欢迎提交 Issue 或邮件反馈。
+
+创建日期：2025-12
+
+欢迎提交 Issue 或 PR 来完善本项目。
