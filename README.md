@@ -33,8 +33,9 @@ qt_for_img 是一款基于 PyQt5 开发的桌面图像处理工具，集成了�
 ```bash
 git clone https://github.com/johnsad-max/qt_for_img.git
 cd qt_for_img
+
 安装依赖
-bash
+```bash
 运行
 pip install PyQt5 opencv-python pillow numpy matplotlib
 运行应用
